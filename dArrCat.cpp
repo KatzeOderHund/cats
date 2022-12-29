@@ -38,7 +38,7 @@ void dArrCats::excpendArr()
 	initialize();
 }
 
-void dArrCats::addCat(std::string name, std::string gender)
+void dArrCats::addCat(string name, string gender)
 {
 	if (this->nOfCats >= this->cap)
 		excpendArr();
@@ -51,7 +51,7 @@ int dArrCats::getNumOfCats()
 	return this->nOfCats;
 }
 
-Cat dArrCats::operator[](const int index) 
+Cat& dArrCats::operator[](int index) 
 {
 	if (index < 0 || index >= this->nOfCats)
 		throw "Bad index";
