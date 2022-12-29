@@ -19,5 +19,4 @@ public:
     string play();
     string pat();
     string reletionship();
-    string getinf() { return to_string(hungry) + " " + to_string(bite) + " " + to_string(stamina) + " " + to_string(happy) + "\n"; }
 };
