@@ -13,7 +13,7 @@ public:
 	~dArrCats();
 	void initialize();
 	void excpendArr();
-	void addCat(std::string name, std::string sex);
+	void addCat(string name, string gender);
 	int getNumOfCats();
-	Cat operator[](const int index);
+	Cat& operator[](const int index);
 };
