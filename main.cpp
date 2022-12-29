@@ -1,22 +1,17 @@
 #include<iostream>
 #include"dArrCat.h"
 
-using namespace std;
-
 void menu(int& choice, dArrCats& cats);
 
 int main()
 {
-    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
     int choice = 0;
     dArrCats cats;
-
 
     do
     {
        menu(choice, cats);
     } while (choice > 0);
-
 
     return 0;
 }
@@ -25,7 +20,7 @@ int main()
 void menu(int& choice, dArrCats& cats)
 {
     int n;
-    string whatCat, name, gender;
+    string whatCat = "", name = "", gender = "";
 
     cout << "MENU" << "\n"
         << "1: Create cat" << "\n"
@@ -37,6 +32,7 @@ void menu(int& choice, dArrCats& cats)
         << "0: Quite" << "\n";
     cout << "Your input: ";
     cin >> choice;
+    cout << "\n";
 
     switch (choice)
     {
@@ -76,6 +72,7 @@ void menu(int& choice, dArrCats& cats)
         cout << "You want to feed all cats or only one?(all/one): ";
         cin.ignore();
         getline(cin, whatCat);
+        cout << "\n";
 
         if (whatCat == "one")
         {
@@ -101,6 +98,7 @@ void menu(int& choice, dArrCats& cats)
         cout << "You want to play with all your cats or only one?(all/one): ";
         cin.ignore();
         getline(cin, whatCat);
+        cout << "\n";
 
         if (whatCat == "one")
         {
@@ -126,6 +124,7 @@ void menu(int& choice, dArrCats& cats)
         cout << "You want to pat all cats or only one?(all/one): ";
         cin.ignore();
         getline(cin, whatCat);
+        cout << "\n";
 
         if (whatCat == "one")
         {
@@ -151,6 +150,7 @@ void menu(int& choice, dArrCats& cats)
         cout << "You want to know your reletionship with all cats or only one?(all/one): ";
         cin.ignore();
         getline(cin, whatCat);
+        cout << "\n";
 
         if (whatCat == "one")
         {
