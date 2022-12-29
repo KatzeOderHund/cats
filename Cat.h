@@ -1,20 +1,23 @@
 #pragma once
 #include<string>
 
+using namespace std;
+
 class Cat
 {
 private:
-    std::string name;
-    std::string gender;
+    string name;
+    string gender;
+    int hungry;
     int bite;
     int stamina;
     int happy;
-    int hungry;
 public:
-    Cat(std::string name = "None", std::string sex = "None");
-    std::string info();
-    std::string feed();
-    std::string play();
-    std::string pat();
-    std::string reletionship();
+    Cat(string name = "None", string gender = "None");
+    string info();
+    string feed();
+    string play();
+    string pat();
+    string reletionship();
+    string getinf() { return to_string(hungry) + " " + to_string(bite) + " " + to_string(stamina) + " " + to_string(happy) + "\n"; }
 };
